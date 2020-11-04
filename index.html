@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html style="height:100%; width:100%;">
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
@@ -12,14 +12,17 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/CapstoneML.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+  <body style="height:100%; width:100%; background-color: rgb(65, 65, 65);">
+    <div class="webgl-content" style="height:90%; width:90%; background-color:black;">
+      <div id="unityContainer" style="width: 90%; height: 85%"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
         <div class="title">ml2</div>
+        
       </div>
+      <br/>
+      <div style="color:white; text-align:center;">The camera above is controlled completely by a neural net. The neural net was trained by Google's Tensorflow via Unity's MLAgents framework.</div>
     </div>
   </body>
 </html>
